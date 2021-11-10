@@ -17,7 +17,7 @@ if sys.version_info[0] == 2:
     _mp_ctx = multiprocessing
 else:
     import queue
-    _mp_ctx = multiprocessing.get_context('forkserver')
+    _mp_ctx = multiprocessing.get_context('spawn')
 
 
 class ExceptionWrapper(object):
